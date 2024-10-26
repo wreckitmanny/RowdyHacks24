@@ -42,7 +42,7 @@ button#startAdventure:hover {
 .delorean {
     width: 100px;
     height: 50px;
-    background-image: url('delorean.png'); /* Add a DeLorean image here */
+    background-image: url('delorean.jpg'); /* Add a DeLorean image here */
     background-size: cover;
     position: relative;
     animation: drive 3s linear infinite;
@@ -59,4 +59,35 @@ button#startAdventure:hover {
     margin-top: 20px;
     font-size: 1.5em;
     color: #fff;
+}
+
+/* Flash overlay styling */
+.flash-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    pointer-events: none;
+    animation: none;
+}
+
+/* Keyframes for flash effect */
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Triggered flash animation */
+.flash {
+    animation: flash 1s ease;
 }

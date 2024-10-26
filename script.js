@@ -1,24 +1,16 @@
-// JavaScript Document
+// Select the Start Adventure button and flash overlay element
+const startAdventureButton = document.getElementById("startAdventure");
+const flashOverlay = document.getElementById("flash");
 
-// Start Adventure function that triggers the Groq API call
-function startAdventure() {
-    const name = document.getElementById("userName").value;
-    const storyDisplay = document.getElementById("story");
+// Function to trigger flash and redirect
+function triggerFlashAndRedirect() {
+    flashOverlay.classList.add("flash"); // Start flash animation
 
-    if (!name) {
-        storyDisplay.textContent = "Please enter your name to start the adventure!";
-        return;
-    }
-
-    // Placeholder for API call to Groq
-    fetch(`https://api.groq.com/generateStory?name=${encodeURIComponent(name)}`)
-        .then(response => response.json())
-        .then(data => {
-            // Display the generated story
-            storyDisplay.textContent = data.story;
-        })
-        .catch(error => {
-            console.error("Error fetching story:", error);
-            storyDisplay.textContent = "Oops! Something went wrong. Try again later.";
-        });
+    // Wait for the animation to complete before redirecting
+    setTimeout(() => {
+        window.location.href = "nextpage.html"; // Replace "nextpage.html" with the target URL
+    }, 1000); // Delay matches the 1s duration of the flash animation
 }
+
+// Add click event listener to the Start Adventure button
+startAdventureButton.addEventListener("click", triggerFlashAndRedirect);

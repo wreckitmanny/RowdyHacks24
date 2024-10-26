@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Back to the Future Adventure</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Back to the Future Adventure</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Animated DeLorean -->
-        <div class="delorean"></div>
 
-        <!-- Input Field for Name -->
-        <input type="text" id="userName" placeholder="What's your name, McFly?">
+<div class="container">
+    <h1>Enter the Adventure</h1>
+    <input type="text" id="userName" placeholder="Enter Your Name">
+    <button id="startAdventure">Start Adventure</button>
+    <div class="delorean"></div>
+    <div id="story"></div>
+</div>
 
-        <!-- Start Adventure Button -->
-        <button id="startAdventure" onclick="startAdventure()">Start Your Adventure</button>
+<!-- Flash overlay element -->
+<div class="flash-overlay" id="flash"></div>
 
-        <!-- Story Display Area -->
-        <div id="story"></div>
-    </div>
+<!-- Link to external JavaScript file -->
+<script src="script.js"></script>
 
-    <script src="script.js"></script>
 </body>
 </html>
