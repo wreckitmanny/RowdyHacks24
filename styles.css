@@ -45,7 +45,7 @@ button#startAdventure:hover {
     background-image: url('delorean.jpg'); /* Add a DeLorean image here */
     background-size: cover;
     position: relative;
-    animation: drive 3s linear infinite;
+    animation: drive 3s linear;
 }
 
 @keyframes drive {
@@ -90,4 +90,12 @@ button#startAdventure:hover {
 /* Triggered flash animation */
 .flash {
     animation: flash 1s ease;
+}
+
+.car {
+  width: 100px;
+  height: auto;
+  background-image: url('delorean.jpg');
+  background-size: cover;
+  background-blend-mode: multiply; /* Makes white pixels transparent */
 }
