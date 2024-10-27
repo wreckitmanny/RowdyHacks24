@@ -24,28 +24,28 @@ function triggerFlash() {
     // Second flash
     setTimeout(() => {
         flashOverlay.classList.add("flash");
-    }, 600); // Trigger second flash after 600ms
+    }, 400); // Trigger second flash after 600ms
 
     setTimeout(() => {
         flashOverlay.classList.remove("flash");
-    }, 900); // End second flash after 900ms
+    }, 500); // End second flash after 900ms
 
     // Third flash
     setTimeout(() => {
         flashOverlay.classList.add("flash");
-    }, 1200); // Trigger third flash after 1200ms
+    }, 600); // Trigger third flash after 1200ms
 
     setTimeout(() => {
         flashOverlay.classList.remove("flash");
-    }, 1500); // End third flash after 1500ms
-}
+    }, 700); // End third flash after 1500ms
+
 	
 
-    // Optional: Remove the flash effect after it completes to reset
+    /* Optional: Remove the flash effect after it completes to reset
     setTimeout(() => {
         flashOverlay.classList.remove("flash");
 		window.location.href = "landing.html";
-    }, 1000);
+    }, 1000);*/
 }
 
 // Trigger the car animation and flash on button click
