@@ -18,7 +18,7 @@ body, html {
 .delorean {
     width: 100px;
     height: 50px;
-    background-image: url('delorean-transparent.png'); /* Use the transparent image */
+    background-image: url('delorean2.jpg'); /* Use the transparent image */
     background-size: cover;
     position: relative;
     /* Remove the animation here; it will be added via JavaScript */
