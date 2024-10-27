@@ -12,11 +12,33 @@ function startCarAnimation() {
     car.addEventListener("animationend", triggerFlash);
 }
 
-// Function to trigger the flash effect
 function triggerFlash() {
-    flashOverlay.classList.add("flash"); // Start flash animation
-	flashOverlay.classList.add("flash");
-	flashOverlay.classList.add("flash");
+    // Trigger first flash
+    flashOverlay.classList.add("flash");
+
+    // Remove and re-add flash class to create consecutive flashes
+    setTimeout(() => {
+        flashOverlay.classList.remove("flash");
+    }, 300); // Duration of the flash off interval
+
+    // Second flash
+    setTimeout(() => {
+        flashOverlay.classList.add("flash");
+    }, 600); // Trigger second flash after 600ms
+
+    setTimeout(() => {
+        flashOverlay.classList.remove("flash");
+    }, 900); // End second flash after 900ms
+
+    // Third flash
+    setTimeout(() => {
+        flashOverlay.classList.add("flash");
+    }, 1200); // Trigger third flash after 1200ms
+
+    setTimeout(() => {
+        flashOverlay.classList.remove("flash");
+    }, 1500); // End third flash after 1500ms
+}
 	
 
     // Optional: Remove the flash effect after it completes to reset
