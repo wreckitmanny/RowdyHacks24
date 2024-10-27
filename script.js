@@ -19,6 +19,7 @@ function triggerFlash() {
     // Optional: Remove the flash effect after it completes to reset
     setTimeout(() => {
         flashOverlay.classList.remove("flash");
+		window.location.href = "landing.html";
     }, 1000);
 }
 
