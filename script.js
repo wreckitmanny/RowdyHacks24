@@ -6,7 +6,7 @@ const startAdventureButton = document.getElementById("startAdventure");
 // Function to start the car animation
 function startCarAnimation() {
     // Add the animation to the car
-    car.style.animation = "driveAcross 3s linear forwards";
+    car.style.animation = "driveAcross 2s linear forwards";
 
     // Listen for the end of the car's animation to trigger the flash
     car.addEventListener("animationend", triggerFlash);
@@ -37,6 +37,7 @@ function triggerFlash() {
 
     setTimeout(() => {
         flashOverlay.classList.remove("flash");
+		window.location.href = "landing.html";
     }, 700); // End third flash after 1500ms
 
 	
