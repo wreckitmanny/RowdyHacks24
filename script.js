@@ -15,6 +15,9 @@ function startCarAnimation() {
 // Function to trigger the flash effect
 function triggerFlash() {
     flashOverlay.classList.add("flash"); // Start flash animation
+	flashOverlay.classList.add("flash");
+	flashOverlay.classList.add("flash");
+	
 
     // Optional: Remove the flash effect after it completes to reset
     setTimeout(() => {
