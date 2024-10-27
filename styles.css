@@ -1,4 +1,4 @@
-/* Basic container styling */
+/* Full-page background and layout styling */
 body, html {
     height: 100%;
     margin: 0;
@@ -14,42 +14,20 @@ body, html {
     text-align: center;
 }
 
-input#userName {
-    padding: 10px;
-    font-size: 1.2em;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-button#startAdventure {
-    padding: 10px 20px;
-    font-size: 1.2em;
-    background-color: #ff0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button#startAdventure:hover {
-    background-color: #ff4500;
-}
-
-/* Car animation */
+/* Car styling with no initial animation */
 .delorean {
     width: 100px;
     height: 50px;
     background-image: url('delorean-transparent.png'); /* Use the transparent image */
     background-size: cover;
     position: relative;
-    animation: driveAcross 3s linear forwards;
+    /* Remove the animation here; it will be added via JavaScript */
 }
 
-/* Keyframes for moving the car across the screen */
+/* Drive animation */
 @keyframes driveAcross {
     0% { transform: translateX(-100px); }
-    100% { transform: translateX(100vw); } /* Moves car fully off the right side */
+    100% { transform: translateX(100vw); }
 }
 
 /* Flash overlay styling */
@@ -81,11 +59,4 @@ button#startAdventure:hover {
 /* Triggered flash animation */
 .flash {
     animation: flash 1s ease;
-}
-
-/* Story display area styling */
-#story {
-    margin-top: 20px;
-    font-size: 1.5em;
-    color: #fff;
 }
